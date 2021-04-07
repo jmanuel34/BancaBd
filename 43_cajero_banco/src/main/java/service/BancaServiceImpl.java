@@ -1,16 +1,23 @@
 package service;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+
 import model.Cuenta;
 import model.Movimiento;
+
+// Inyeccion de dependencias Cdi
+@Named("bancaService")	// Es instanciable
+@RequestScoped			// Ambito de peticion
 
 public class BancaServiceImpl implements BancaService {
 
