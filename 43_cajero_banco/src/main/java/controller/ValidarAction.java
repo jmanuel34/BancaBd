@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,14 +20,15 @@ import service.BancaServiceFactory;
 public class ValidarAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		BancaService service = BancaServiceFactory.getBancaService();
-		Cuenta cuenta = service.validarCuenta(Integer.parseInt(request.getParameter("numeroCuenta")));
+		BancaService bancaService = BancaServiceFactory.getBancaService();
+		Cuenta cuenta = bancaService.validarCuenta(Integer.parseInt(request.getParameter("numeroCuenta")));
 		if (cuenta != null) {
 			request.getSession().setAttribute("cuenta", cuenta);
 			request.getSession().setAttribute("numeroCuenta", cuenta.getNumeroCuenta());
