@@ -19,7 +19,8 @@ import service.BancaServiceFactory;
 @WebServlet("/ValidarAction")
 public class ValidarAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	@Inject
+	BancaService bancaService;
 
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
@@ -27,7 +28,7 @@ public class ValidarAction extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		BancaService bancaService = BancaServiceFactory.getBancaService();
+//		BancaService bancaService = BancaServiceFactory.getBancaService();
 		Cuenta cuenta = bancaService.validarCuenta(Integer.parseInt(request.getParameter("numeroCuenta")));
 		if (cuenta != null) {
 			request.getSession().setAttribute("cuenta", cuenta);

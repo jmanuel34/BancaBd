@@ -20,7 +20,8 @@ import service.BancaServiceFactory;
 @WebServlet("/MovimientosAction")
 public class MovimientosAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	@Inject
+	BancaService bancaService;
 
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)

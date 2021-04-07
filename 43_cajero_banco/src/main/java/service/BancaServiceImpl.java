@@ -16,8 +16,9 @@ import model.Cuenta;
 import model.Movimiento;
 
 // Inyeccion de dependencias Cdi
-@Named("bancaService")	// Es instanciable
-@RequestScoped			// Ambito de peticion
+
+@Named("bancaService")
+@RequestScoped
 
 public class BancaServiceImpl implements BancaService {
 
