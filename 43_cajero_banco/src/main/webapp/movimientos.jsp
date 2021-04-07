@@ -32,6 +32,7 @@
 			</c:forEach>
 		</table>
 </center>
+<a href="Controller?option=toOperacion">Operar en cuenta</a>  
 <a href="Controller?option=toInicio">Login</a>  
 </body>
 </html>
