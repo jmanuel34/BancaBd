@@ -32,5 +32,6 @@
 			</c:forEach>
 		</table>
 </center>
+<a href="Controller?option=toInicio">Login</a>  
 </body>
 </html>

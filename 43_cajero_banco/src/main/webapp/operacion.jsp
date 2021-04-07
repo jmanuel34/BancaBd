@@ -12,14 +12,14 @@
 <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cuenta: ${sessionScope.cuenta.numeroCuenta}
             <h1>Seleccione Operacion</h1></center>
             <br/>
-            <a href="Controller?option=toIngresar">Ingreso</a></br></br>
+            <a href="Controller?option=toIngresar&cuenta=${sessionScope.cuenta.numeroCuenta}">Ingreso</a></br></br>
             <a href="Controller?option=toExtraer">Extracción</a></br></br>
             <a href="Controller?option=toTransferir">Transferencia</a></br></br>
             <a href="Controller?option=doMovimientos">Movimientos</a></br></br>
             </br></br>
             
 
-<a href="Controller?option=toInicio">Inicio</a>          
+<a href="Controller?option=toInicio">Login</a>          
             
 </body>
 </html>

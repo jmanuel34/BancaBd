@@ -1,27 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<title>Banca-Transferencia</title>
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<meta charset="UTF-8">
+<title>Banca-Ingreso</title>
 <script type = "text/javascript">	
 	function validar() {
 		var cantidad=document.getElementById("cantidad").value;
-		var cuentaAbono=document.getElementById("cuentaAbono").value;
-		if (isNan(cantidad) || isNan(cuentaAbono)) {
+		if (isNan(cantidad) ) {
 			return false
 		}
 		return true;
 	}	
 </script>
- 
 </head>
 <body>
+
 <div class="container">
 	<h3>Transferencia</h3>
 	<h3>Numero de cuenta: ${sessionScope.cuenta.numeroCuenta}</h3>

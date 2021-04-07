@@ -26,7 +26,7 @@ public class IngresarAction extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		BancaService bancaService = BancaServiceFactory.getBancaService();
+//		BancaService bancaService = BancaServiceFactory.getBancaService();
 //		HttpSession s=request.getSession();
 		Double cantidad=Double.parseDouble(request.getParameter("cantidad"));
 		Integer numeroCuenta=(Integer)request.getSession().getAttribute("numeroCuenta");

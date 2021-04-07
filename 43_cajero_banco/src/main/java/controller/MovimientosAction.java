@@ -28,7 +28,7 @@ public class MovimientosAction extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer numeroCuenta=(Integer)request.getSession().getAttribute("numeroCuenta");
-		BancaService bancaService=BancaServiceFactory.getBancaService();    // No necesario por la inyeccion de dependencias
+//		BancaService bancaService=BancaServiceFactory.getBancaService();    // No necesario por la inyeccion de dependencias
 		List<Movimiento> movimientos = bancaService.mostrarMov(numeroCuenta);
 		request.setAttribute("movimientos", movimientos);
 		

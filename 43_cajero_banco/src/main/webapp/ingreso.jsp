@@ -3,10 +3,6 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Banca Operacion/title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -14,7 +10,10 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Banca-Ingreso efectivo</title>
 <script type = "text/javascript">	
 	function validar() {
 		var cantidad=document.getElementById("cantidad").value;
@@ -24,7 +23,6 @@
 		return true;
 	}	
 </script>
- 
 </head>
 <body>
 <div class="container">
@@ -41,5 +39,6 @@
 	<br/><br/>
 	<a href="Controller?option=toInicio">Login</a>  
 </div>
+
 </body>
 </html>

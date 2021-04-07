@@ -5,8 +5,8 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Banca Operacion/title>
+
+<title>Banca-Extraccion efectivo</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -24,22 +24,23 @@
 		return true;
 	}	
 </script>
- 
 </head>
 <body>
 <div class="container">
-	<h3>Ingreso</h3>
-	<h3>Cuenta: ${sessionScope.cuenta.numeroCuenta}</h3>
-	<form action="Controller?option=doIngresar" method="post" onsubmit="return validar();">
+	<h3>Extraccion</h3>
+	<h3>Numero de cuenta: ${sessionScope.cuenta.numeroCuenta}</h3>
+	
+	<form action="Controller?option=doExtraer" method="post" onsubmit="return validar();">
 		
 		<div class="form-group">
-			<label>Cantidad a Ingresar</label><input type="text" name="cantidad" id="cantidad" class="form-control" style="width:30%" placeholder="cantidad" />
+			<label>Cantidad a Extraer</label><input type="text" name="cantidad" id="cantidad" class="form-control" style="width:30%" placeholder="cantidad" />
 		</div>
-		<button type="submit" class="btn btn-default">Ingresar</button>
+		<button type="submit" class="btn btn-default">Extraer</button>
 		
 	</form>
-	<br/><br/>
 	<a href="Controller?option=toInicio">Login</a>  
+	<br/><br/>
 </div>
+
 </body>
 </html>
